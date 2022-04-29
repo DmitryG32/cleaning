@@ -70,31 +70,53 @@ $(function () {
       },
     ],
   });
-
-  /* $(".reviews__slider").slick({
-    dots: true,
-    centerMode: true,
-    centerPadding: "60px",
-    slidesToShow: 2,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 1,
-        },
-      },
-    ],
-  }); */
 });
+
+const smoothScroll = () => {
+  const menu = document.querySelector(".menu__list");
+  const links = menu.querySelectorAll("a");
+  const btn = document.querySelectorAll(".click__btn");
+  const imgfooter = document.querySelector(".footer__logo");
+
+  imgfooter.addEventListener("click", (event) => {
+    event.preventDefault();
+    const section = document.querySelector(imgfooter.getAttribute("href"));
+    if (section) {
+      seamless.scrollIntoView(section, {
+        behavior: "smooth",
+        block: "start",
+        inline: "center",
+      });
+    }
+  });
+
+  btn.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      const section = document.querySelector(button.getAttribute("href"));
+      if (section) {
+        seamless.scrollIntoView(section, {
+          behavior: "smooth",
+          block: "start",
+          inline: "center",
+        });
+      }
+    });
+  });
+
+  links.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const section = document.querySelector(link.getAttribute("href"));
+      if (section) {
+        seamless.scrollIntoView(section, {
+          behavior: "smooth",
+          block: "start",
+          inline: "center",
+        });
+      }
+    });
+  });
+};
+
+smoothScroll();

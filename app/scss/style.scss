@@ -280,7 +280,8 @@
     text-align: left;
   }
   &__img {
-    max-width: 110px;
+    //max-width: 110px;
+    max-width: 75px;
     margin: 0 auto;
   }
   &__subtitle {
@@ -307,6 +308,10 @@
     display: none;
   }
 
+  .service__subtitle{
+    display: none;
+  }
+
   span{
     margin-bottom: 10px;
     display: block;
@@ -322,11 +327,10 @@
   }
 
   &__slider-item {
+    overflow: hidden;
+    border-radius: 20px;
     max-width: 346px;
     max-height: 462px;
-    img {
-      border-radius: 20px;
-    }
   }
 }
 
