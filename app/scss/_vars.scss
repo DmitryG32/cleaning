@@ -1,0 +1,45 @@
+/* $accent: #50a479; */
+$accent: #99cc99;
+//$default: #22332a;
+$default: #757575;
+$orange: #99cc99;
+
+%rubik-400 {
+  font-family: "Rubik-Regular", sans-serif;
+  font-weight: 400;
+}
+
+%rubik-500 {
+  font-family: "Rubik-Medium", sans-serif;
+  font-weight: 500;
+}
+
+%rubik-700 {
+  font-family: "Rubik-Bold", sans-serif;
+  font-weight: 700;
+}
+
+%btn {
+  font-weight: 700;
+  padding: 16px 0;
+  color: #fff;
+  background: linear-gradient(
+    45deg,
+    #ace1ac 0%,
+    rgb(70 185 154) 50%,
+    rgb(11 99 106) 100%
+  );
+
+  box-shadow: 0px 7px 20px 0px #99cc9973;
+  border-radius: 40px;
+  border: none;
+  width: 244px;
+  transition: all 0.2s;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+%btn:hover {
+  box-shadow: 0px 4px 29px -4px rgba(23, 116, 116, 1);
+}
