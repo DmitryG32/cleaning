@@ -41,6 +41,10 @@
 
 @media(max-width: 1050px) {
 
+  .header__wrapper{
+    background-attachment: scroll;
+  }
+
   .container{
     max-width: 960px;
   }
@@ -75,35 +79,45 @@
     order: 1;
     max-width: 100%;
   }
-  .menu__list {
-    display: none;
-  }
   
-  .menu__btn {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    padding: 0;
-    cursor: pointer;
-  }
-  
-  .menu__btn::before,
-  .menu__btn::after {
-    content: "";
-    width: 24px;
-    height: 2px;
-    background-color: #000000;
+  .menu__list {   
+    transform: translateX(-200%);
     display: block;
-    margin-bottom: 4px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 10;
+    background-color: #fff;
+    transition: all .5s;
+  }
+    .menu__list--active{
+      transform: translateX(0%);
+      transition: all .5s;
+    }
+  
+  .menu__list-item {    
+    text-align: center;
+    width: 100%;
+    padding: 25px 0;
+    border-bottom: 1px solid #ddd;
+  
+    a {
+      color: #22332a;
+      font-weight: 400;
+    }
+  }
+
+  .menu__list-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
   
-  .menu__btn-line {
-    background-color: #000000;
+  .menu__btn{
     display: block;
-    width: 24px;
-    height: 2px;
-    margin-bottom: 4px;
-  }
+  } 
 
   .about__item{
     margin-right: 0;
@@ -111,6 +125,10 @@
 
   .service__items{
     margin: 0;
+  }
+
+  .contacts{
+    background-attachment: scroll;
   }
 
   .contacts__inner {
@@ -128,6 +146,11 @@
   }
   .slick-arrow{
     display: none !important;
+  }
+
+  .slick-dots {
+    display: flex;
+    flex-wrap: wrap;
   }
   
 }

@@ -74,7 +74,7 @@ $(function () {
 
 const smoothScroll = () => {
   const menu = document.querySelector(".menu__list");
-  const links = menu.querySelectorAll("a");
+  const links = menu.querySelectorAll(".menu__list-link");
   const btn = document.querySelectorAll(".click__btn");
   const imgfooter = document.querySelector(".footer__logo");
 
@@ -119,4 +119,14 @@ const smoothScroll = () => {
   });
 };
 
+const menuActive = () => {
+  const menuBlock = document.querySelector(".menu__list");
+  const menuBtn = document.querySelector(".menu__btn");
+
+  menuBtn.addEventListener("click", () => {
+    menuBlock.classList.toggle("menu__list--active");
+  });
+};
+
+menuActive();
 smoothScroll();
